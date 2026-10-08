@@ -1,6 +1,6 @@
 # AWS Lambda – Automatic EC2 Instance Launch
 
-## 📌 Project Overview
+## 📌 Practical Overview
 
 This project demonstrates how to **automatically launch an Amazon EC2 instance using an AWS Lambda function**.
 
@@ -62,7 +62,7 @@ Create a Lambda function named **`EC2-Instance`** using a Python runtime.
 
 The screenshot below shows the Lambda function created successfully.
 
-![Lambda Function Created](screenshots/Function%20Created.png)
+![Lambda Function Created](Screenshots/Function-Created.png)
 
 ---
 
@@ -72,7 +72,7 @@ Open the Lambda function and go to the **Function overview** / **Code** section.
 
 The function is configured to execute Python code that communicates with Amazon EC2.
 
-![Lambda Function Overview](screenshots/Function%20overview.png)
+![Lambda Function Overview](Screenshots/Function-overview.png)
 
 ---
 
@@ -129,7 +129,7 @@ The execution result in the screenshot shows:
 - **HTTP status code:** `200`
 - An EC2 instance ID was returned.
 
-![Lambda Code and Execution](screenshots/Code%20and%20Execution.png)
+![Lambda Code and Execution](Screenshots/Code-and-Execution.png)
 
 ---
 
@@ -139,11 +139,11 @@ After successful Lambda execution, open **Amazon EC2 → Instances**.
 
 The instance list shows the newly launched instance with instance type **`t3.micro`** and a **Running** state.
 
-![EC2 Instance Launched](screenshots/Instance%20Launched.png)
+![EC2 Instance Launched](Screenshots/EC2-2.png)
 
 Open the instance details to verify its configuration.
 
-![EC2 Instance Details](screenshots/EC2-1.png)
+![EC2 Instance Details](Screenshots/EC2-1.png)
 
 ---
 
@@ -180,11 +180,7 @@ The Lambda execution role must have permission to launch EC2 instances.
 For a lab/demo environment, the role needs permissions covering the EC2 actions used by the function, such as:
 
 ```text
-ec2:RunInstances
-ec2:DescribeInstances
-ec2:DescribeImages
-ec2:DescribeSubnets
-ec2:DescribeSecurityGroups
+ec2:amazonEC2FullAccess
 ```
 
 Depending on the configuration and resources used, additional permissions may be required.
@@ -201,19 +197,19 @@ Instead, create a least-privilege IAM policy containing only the required action
 
 ---
 
-# 📂 Project Structure
+# 📂 Practical-Structure
 
 ```text
-AWS-Lambda-EC2-Project/
+AWS-Lambda-EC2-Practical/
 │
 ├── README.md
 │
 └── screenshots/
-    ├── Function Created.png
-    ├── Function overview.png
-    ├── Code and Execution.png
-    ├── Instance Launched.png
-    └── EC2-1.png
+   ├── Function-Created.png
+   ├── Function-overview.png
+   ├── Code-and-Execution.png
+   ├── EC2-2.png    
+   └── EC2-1.png
 ```
 
 ---
@@ -234,25 +230,27 @@ The project successfully demonstrates:
 ## 📸 Screenshots
 
 ### Lambda Function Created
-![Function Created](screenshots/Function%20Created.png)
+![Function Created](Screenshots/Function-Created.png)
 
 ### Lambda Function Overview
-![Function Overview](screenshots/Function%20overview.png)
+![Function Overview](Screenshots/Function-overview.png)
 
 ### Code & Execution Result
-![Code and Execution](screenshots/Code%20and%20Execution.png)
+![Code and Execution](Screenshots/Code-and-Execution.png)
 
 ### EC2 Instance Launched
-![Instance Launched](screenshots/Instance%20Launched.png)
+![Instance Launched](Screenshots/Ec2-2.png)
 
 ### EC2 Instance Details
-![EC2 Details](screenshots/EC2-1.png)
+![EC2 Details](Screenshots/EC2-1.png)
 
 ---
 
 ## 🧑‍💻 Author
 
-**AWS Cloud Project**
+**Sujit More**
+
+AWS and Devops engineer
 
 ---
 
